@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeBooks</title>
+    <link rel="shortcut icon" href="/images/log.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="stylesheets/style-nav.css">
+    <link rel="stylesheet" href="stylesheets/style-products.css">
+    <link rel="stylesheet" href="stylesheets/style-page-Products.css">
+    <link rel="stylesheet" href="stylesheets/style-footer.css">
+
+</head>
+
+<body>
+
+    <!--#### Partials do header ###-->
+    <%- include('./partials/header') %>
+
+    <main class="container-page-products">
+
+        <div class="pageProducts">
+       
+                <!--Esse vem do banco, vai precisar fazer o for-->
+                <% for(let books of data){ %>
+                <div class="card-product">
+                   
+                    <img src="<%=books.dataValues.image%>" alt="">
+                    <strong class="title-prod">
+                        <%=books.dataValues.TITLE_BOOK%>
+                    </strong>
+                    <strong class="preco-prod">
+                        <%=books.dataValues.PRICE%>
+                    </strong>
+                    <a href="product">
+                        <button class="btn">Adicionar ao carrinho</button>
+                    </a>
+                </div>
+                <% } %>
+        </div>
+
+    </main>
+
+    <!--### Partials do footer ###-->
+    <%- include('./partials/footer') %>
+    
+    <script src="../javascripts/index.js"></script>
+    <script src="../javascripts/addCart.js"></script>
+   
+</body>
+
+</html>

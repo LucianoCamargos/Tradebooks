@@ -1,0 +1,126 @@
+<div class="container-cadastro">
+
+    <div class="form-user">
+
+        <form method="post" action="/userProfile/completarCadastro?_method=PUT" name="userProfile">
+
+            <div>
+                <label for="">Nome Completo</label>
+                <input type="text" id="name" name="name" value="<%=userLogged.FULL_NAME%>">
+            </div>
+            <div>
+                <label for="">Nome de Usuário</label>
+                <input type="text" id="name" name="nameUser" value="<%=userLogged.USER_NAME%>" disabled="true" >
+
+            </div>
+
+            <div>
+                <label for="">Data de nascimento</label>
+                <input type="date" name="dataNascimento" value="<%=userLogged.BIRTH_DATE%>">
+            </div>
+
+
+            <div>
+                <label for="">CPF</label>
+                <input type="text" name="cpf" value="<%=userLogged.CPF%>">
+
+            </div>
+            <div>
+                <label for="">Telefone</label>
+                <input type="tel" name="telefone" value="<%=userLogged.TEL%>">
+
+            </div>
+
+
+            <div>
+                <label for="">Gênero</label>
+                <select name="sexo" id="">
+                    <%if(userLogged.SEXO=='masc' ){%>
+                        <option value="masc">Masculino</option>
+                        <option value="fem">Feminino</option>
+                        <option value="Prefiro não dizer">Prefiro não dizer</option>
+                        <%}else if(userLogged.SEXO=='fem' ){%>
+                            <option value="fem">Feminino</option>
+                            <option value="masc">Masculino</option>
+                            <option value="Prefiro não dizer">Prefiro não dizer</option>
+                            <%}else{%>
+                                <option value="Prefiro não dizer">Prefiro não dizer</option>
+                                <option value="fem">Feminino</option>
+                                <option value="masc">Masculino</option>
+                                <% } %>
+
+                </select>
+            </div>
+
+
+
+            <button class="btnUserProfile">Salvar Informações</button>
+
+
+        </form>
+        <div id="divBtnCancelar">
+            <button class="btnUserProfile" id="btnCancelar">Cancelar</button>
+        </div>
+
+    </div>
+    <section class="container-dados">
+        <div class="dados">
+            
+            <div>
+                <strong>Nome:</strong>
+                <span>
+                    <%=userLogged.FULL_NAME%>
+                </span>
+            </div>
+            <div>
+                <strong>Nome de Usuário:</strong>
+                <span>
+                    <%=userLogged.USER_NAME%>
+                </span>
+            </div>
+            <div>
+                <strong>Email:</strong>
+                <span>
+                    <%=userLogged.EMAIL%>
+                </span>
+            </div>
+            <div>
+                <strong>Data de Nascimento:</strong>
+                <span>
+                    <%=userLogged.BIRTH_DATE%>
+                </span>
+            </div>
+            <div>
+                <strong>Gênero:</strong>
+                <%if(userLogged.SEXO=='masc' ){%>
+                    <span>
+                        Masculino
+                    </span>
+
+                    <%}else if(userLogged.SEXO=='fem' ){%>
+                        <span>
+                            Feminino
+                        </span>
+                        <%}else{%>
+                            <span>
+                                Prefiro não dizer
+                            </span>
+                            <% } %>
+            </div>
+            <div>
+                <strong>CPF:</strong>
+                <span>
+                    <%=userLogged.CPF%>
+                </span>
+            </div>
+            <div>
+                <strong>Telefone:</strong>
+                <span>
+                    <%=userLogged.TEL%>
+                </span>
+            </div>
+        </div>
+        <button class="edit-user">Editar</button>
+    </section>
+
+</div>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="shortcut icon" href="../images/log.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../stylesheets/style-nav.css">
+    <link rel="stylesheet" href="../stylesheets/style-footer.css">
+    <link rel="stylesheet" href="../stylesheets/style-login.css">
+    <link rel="stylesheet" href="../stylesheets/style-form-registration.css">
+</head>
+
+<body>
+
+    <!--### Partials do header ###-->
+    <%- include('./partials/header') %>
+
+
+        <main>
+            <div class="container-login">
+                <div class="img-box">
+                    <h2>Bem vindos a </h2>
+                    <h1> TradeBooks!</h1>
+                    <img src="../images/login.svg">
+                </div>
+                <div class="content-box">
+                    <div class="form-box">
+                        <h2>Login</h2>
+                        <form method="post" action="/login" class="login">
+                            <div class="input-box">
+                                <span>Email</span>
+                                <input class="email-login" name="email" type="email" placeholder="@email.com" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="senha-login">Senha</span>
+                                <input type="password" name="password" placeholder="senha" required>
+                            </div>
+                            <div class="remember">
+                                <label class="lembrar-login">
+                                    <input type="checkbox" name="logado"> Lembrar
+                                </label>
+                                <a href="#">Esqueceu a Senha?</a>
+                            </div>
+                            <div class="input-box">
+                                <button class="btt" type="submit">entrar</button>
+                            </div>
+                            <div class="input-box">
+                                <p>Não Tem Uma Conta? <a id="registration">Inscrever-se</a></p>
+                            </div>
+                        </form>
+                        <!--Verificação se a validação do front falhar, irá renderizar erros-->
+                        <% if (errors) { %>
+                            <ul>
+                                <% for (let error of errors) { %>
+                                    <li>
+                                        <%=error.msg%>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                            <% } %>
+
+                                <% if (erro) { %>
+                                    <ul>
+                                        <li>
+                                            <%=erro %>
+
+                                        </li>
+                                    </ul>
+                                    <% } %>
+
+                                        <h3>Logar Com</h3>
+
+                                        <ul class="ul">
+                                            <li><img src="../images/facebook.png"></li>
+                                            <li><img src="../images/google.png"></li>
+                                            <li><img src="../images/apple.png"></li>
+                                        </ul>
+                    </div>
+   
+                </div>
+            </div>
+            <!--Após o click no inscrever-se a janela com esse formulário abaixo vai aparecer.-->
+            <div class="container-registration">
+                <div class="btn-close">
+                    <h1>Registre-se</h1>
+                    <button id="close">X</button>
+                </div>
+
+                <!--Form de casdastro de usuário-->
+                <%- include('./partials/registerUser') %>
+
+            </div>
+        </main>
+
+        <!--### Partials do footer ###-->
+        <%- include('./partials/footer') %>
+
+            <script src="../javascripts/index.js"></script>
+            <script src="../javascripts/login.js"></script>
+            <script src="../javascripts/addCart.js"></script>
+</body>
+
+</html>

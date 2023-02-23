@@ -1,0 +1,131 @@
+* {
+    border: none;
+}
+main{
+    margin-top: 201px;
+   
+}
+.container-registration {
+    width: 90%;
+    height: auto;
+
+    position: fixed;
+    top: 50px;
+    left: 25px;
+    background: white;
+    box-shadow: 0px 5px 10px 0px black;
+    display: none;
+}
+
+.container-registration h1 {
+    padding: 5px;
+    text-align: center;
+    font-family: 'Ropa Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 27px;
+    color: #0D203B;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.style-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.linha {
+    height: 2px;
+    background: #1C98ED;
+}
+
+label {
+    margin-top: 25px;
+    padding: 5px;
+    font-family: 'Ropa Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #0D203B;
+}
+
+input {
+    flex: 1;
+    font-size: 15px;
+    padding: 5px;
+    outline: 0;
+    font-family: 'Ropa Sans';
+    font-style: normal;
+    font-weight: 400;
+    color: #0D203B;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-resgitrer {
+    width: 250px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background: #1C98ED;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+span {
+    font-family: 'Ropa Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #0D203B;
+}
+
+#registration {
+    cursor: pointer;
+}
+
+.btn-close {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn-close button {
+    background: white;
+    color: #0D203B;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+@media (min-width:769px) {
+    .container-registration {
+        width: 40%;
+        position: fixed;
+        top: 25px;
+        left: 470px;
+        display: none;
+    }
+
+}

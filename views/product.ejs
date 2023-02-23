@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeBooks</title>
+    <link rel="shortcut icon" href="/images/log.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="stylesheets/style-nav.css">
+    <link rel="stylesheet" href="stylesheets/style-product-page.css">         
+    <link rel="stylesheet" href="stylesheets/style-footer.css">
+
+</head>
+
+<body>
+
+    <!--### Partials do header ###-->
+    <%- include('./partials/header') %>
+
+    <main>
+
+        <section class="container-product">
+            <div>
+                <img class="book-cover" src="images/a-sutil-arte-de-ligar-o-foda-se-2017-mark-manson-et-al-224p-pt.jpg"
+                    alt="">
+            </div>
+            <div class="book-informations">
+                <h1 id="titleBook">A sutil arte de ligar o foda-se</h1>
+                <div class="star">
+                    <img src="images/star.png" alt="">
+                    <img src="images/star.png" alt="">
+                    <img src="images/star.png" alt="">
+                    <img src="images/star.png" alt="">
+                    <img src="images/star.png" alt="">
+
+
+                </div>
+                <strong>R$ 28,00</strong>
+                <button class="btn-buy">Comprar</button>
+                <button class="btn-cart">Adicionar ao carrinho</button>
+            </div>
+        </section>
+        <div class="informations">
+
+            <section class="container-description">
+                <strong class="title-description">Descrição</strong>
+                <p class="book-description">Chega de tentar buscar um sucesso que só existe na sua cabeça. Chega de se
+                    torturar para pensar positivo
+                    enquanto sua vida vai ladeira abaixo. Chega de se sentir inferior por não ver o lado bom de estar no
+                    fundo do poço.Coaching, autoajuda, desenvolvimento pessoal, mentalização positiva — sem querer
+                    desprezar
+                    o valor de nada disso, a grande verdade é que às vezes nos sentimos quase sufocados diante da
+                    pressão
+                    infinita por parecermos otimistas o tempo todo. É um pecado social se deixar abater quando as coisas
+                    não
+                    vão bem. Ninguém pode fracassar simplesmente, sem aprender nada com isso. Não dá mais. É
+                    insuportável. E
+                    é aí que entra a revolucionária e sutil arte de ligar o foda-se.Mark Manson usa toda a sua
+                    sagacidade de
+                    escritor e seu olhar crítico para propor um novo caminho rumo a uma vida melhor, mais coerente com a
+                    realidade e consciente dos nossos limites. E ele faz isso da melhor maneira. Como um verdadeiro
+                    amigo,
+                    Mark se senta ao seu lado e diz, olhando nos seus olhos: você não é tão especial. Ele conta umas
+                    piadas
+                    aqui, dá uns exemplos inusitados ali, joga umas verdades na sua cara e pronto, você já se sente
+                    muito
+                    mais alerta e capaz de enfrentar esse mundo cão.Para os céticos e os descrentes, mas também para os
+                    amantes do gênero, enfim uma abordagem franca e inteligente que vai ajudar você a descobrir o que é
+                    realmente importante na sua vida, e f*da-se o resto. Livre-se agora da felicidade maquiada e
+                    superficial
+                    e abrace esta arte verdadeiramente transformadora.</p>
+            </section>
+
+            <section class="container-caracteristicas">
+                <strong>Características</strong>
+                <table>
+
+
+                    <tr>
+                        <td>Acabamento</td>
+                        <td>Brochura</td>
+                    </tr>
+                    <tr>
+                        <td>Ano da edição</td>
+                        <td>2017</td>
+                    </tr>
+                    <tr>
+                        <td>Sob Encomenda</td>
+                        <td>Não</td>
+                    </tr>
+                    <tr>
+                        <td>Autor</td>
+                        <td>Manson,Mark</td>
+                    </tr>
+                    <tr>
+                        <td>Fora de linhas</td>
+                        <td>Não</td>
+                    </tr>
+                    <tr>
+                        <td>ISBN</td>
+                        <td>9788551002490</td>
+                    </tr>
+                    <tr>
+                        <td>Formato Livro Digital</td>
+                        <td>Não</td>
+                    </tr>
+                    <tr>
+                        <td>Produto Digital</td>
+                        <td>Não</td>
+                    </tr>
+                    <tr>
+                        <td>Idioma</td>
+                        <td>Português</td>
+                    </tr>
+                    <tr>
+                        <td>Número da edição</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Número de Páginas</td>
+                        <td>224</td>
+                    </tr>
+                    <tr>
+                        <td>Marca</td>
+                    </tr>
+
+                </table>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!--### Partials do footer ###-->
+    <%- include('./partials/footer') %>
+    
+    <script src="../javascripts/index.js"></script>
+    <script src="../javascripts/addCart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeBooks</title>
+    <link rel="shortcut icon" href="/images/log.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="stylesheets/style-nav.css">
+    <link rel="stylesheet" href="stylesheets/style-userProfile.css">
+    <link rel="stylesheet" href="stylesheets/style-footer.css">
+    <link rel="stylesheet" href="stylesheets/style-endereco.css">
+
+
+    <link rel="stylesheet" href="../stylesheets/style-nav.css">
+    <link rel="stylesheet" href="../stylesheets/style-userProfile.css">
+    <link rel="stylesheet" href="../stylesheets/style-footer.css">
+    <link rel="stylesheet" href="../stylesheets/style-endereco.css">
+    <link rel="stylesheet" href="../stylesheets/style-dados-user.css">
+
+</head>
+<body>
+    <!--### Partials do header ###-->
+    <%- include('./partials/header') %>
+        <main>
+            <section class="container-forms">
+                <aside>
+                    <div class="div-logo-user">
+                        <img src="../images/user-2.png" alt="" class="logo-user">
+                        <strong>Olá</strong>
+                    </div>
+                    <div class="nav-forms">
+                        <div id="btn-navs">Meus Pedidos</div>
+                        <div id="btn-navs">Dados Pessoais</div>
+                        <div id="btn-navs">Endereço</div>
+                        <div id="btn-navs">Autenticação</div>
+                        <div id="btn-navs">Minha Loja</div>
+                        <div>
+                            <a href="/login/logout">
+                                <div>Sair</div>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+                <section>
+                    <div class="div-title-data">
+                        <strong id="strong-title">Dados Pessoais</strong>
+                    </div>
+                    <%- include('./partials/formCadastroUser') %>
+                        <%- include('./partials/formEndereco') %>
+                            <div class="autenticar">
+                                <form action="">
+                                    <strong>Alteração da senha de acesso</strong>
+                                    <label for="">Senha</label>
+                                    <div class="style-input">
+                                        <input type="text">
+                                        <span></span>
+                                    </div>
+                                    <div class="linha"></div>
+                                    <button class="btnUserProfile">Alterar Senha</button>
+                                </form>
+                            </div>
+                            <div class="my-store">
+                                <a href="myStore">Ir para minha loja</a>
+                            </div>
+
+                            <div class="meusPedidos">
+                                
+                                    <% for(let pedido of pedidos){ %>
+                                   <!--Aqui vai informações do pedido feito, ainda precisa ver como vai pegar
+                                os dados de cada iten do pedido e todos os outros dados necessários nessa parte-->
+                                    <% } %>
+                                    
+                            </div>
+                </section>
+            </section>
+        </main>
+        <!--### Partials do footer ###-->
+        <%- include('./partials/footer') %>
+            <script src="../javascripts/addCart.js"></script>
+            <script src="../javascripts/userProfile.js"></script>
+            <script src="../javascripts/index.js"></script>
+            <script src="../javascripts/formEndereco.js"></script>
+</body>
+
+</html>

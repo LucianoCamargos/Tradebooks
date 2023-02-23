@@ -1,0 +1,36 @@
+<div class="container-enderecos">
+    <% for(let enderecos of myAddress){ %>
+    <div class="enderecos">
+        <!--Aqui lista de endereços onde posso editar ou excluir um endereço-->
+        <div class="spanEndereco" id="<%=enderecos.dataValues.id%>">
+            <div>
+
+                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.RUA,%></span>
+                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.NUMERO%></span>
+
+            </div>
+            <div>
+
+                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.BAIRRO,%></span>
+                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.CIDADE-%>  </span>
+                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.ESTADO%></span>
+            </div>
+            <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.CEP%></span>
+        </div>
+        <div class="button">
+        
+          
+                <button id="editar" class="<%=enderecos.dataValues.id%>">Editar</button>
+
+        
+            <form method="post" action="/userProfile/deletarAddress/<%=enderecos.dataValues.id%>?_method=DELETE">
+
+                <button >Excluir</button>
+            </form>
+
+       
+        </div>
+    </div>
+
+    <% } %>
+</div>

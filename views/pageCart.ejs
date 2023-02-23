@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeBooks</title>
+    <link rel="shortcut icon" href="/images/log.ico" type="image/x-icon" />
+
+
+    <link rel="stylesheet" href="../stylesheets/style-nav-footer.css">
+    <link rel="stylesheet" href="../stylesheets/style-pageCart.css">
+    <link rel="stylesheet" href="../stylesheets/style-endereco.css">
+
+    
+</head>
+
+<body>
+   <header>
+      <nav>
+         <a href="/">
+
+            <img src="../images/logo.png" alt="" class="logo">
+         </a>
+      </nav>
+   </header>
+
+   <main>
+    
+    <section class="section-table-cart">
+        <table class="tableTitle">
+            <tr>
+                <th>Produto</th>
+                <th>Entrega</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th>Excluir</th>
+            </tr>
+        </table>
+        <table class="tabela-cart">
+            
+        </table>
+
+    </section>
+
+    <section  class="section-address-check">
+        <h3>Escolha o endereço para entrega</h3>
+        <div class="address-check">
+
+
+            <div class="container-enderecos">
+                    <% for(let enderecos of myAddress){ %>
+                       
+                    <div class="enderecos">
+                        <!--Aqui lista de endereços onde posso editar ou excluir um endereço-->
+                       
+                        <div class="spanEndereco" id="<%=enderecos.dataValues.id%>">
+                            <div>
+                
+                                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.RUA%>,</span>
+                                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.NUMERO%></span>
+                
+                            </div>
+                            <div>
+                
+                                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.BAIRRO%>,</span>
+                                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.CIDADE%> - </span>
+                                <span id="spanE<%=enderecos.dataValues.id%>"><%=enderecos.dataValues.ESTADO%></span>
+                            </div>
+                            <div>
+                                <span>CEP:</span>
+                                <span id="spanE<%=enderecos.dataValues.id%>" class="cep-pedido"><%=enderecos.dataValues.CEP%></span>
+                            </div>
+                        </div>
+            
+                    </div>
+                
+                    <% } %>
+                
+            </div>
+            <span class="trocar-Address">Trocar endereço</span>
+        </div>
+        <h3>Forma de pagamento</h3>
+      
+            <div class="container-forma-pagamento">
+
+                <div class="formaPag">
+                    <input type="radio" name="pagamento" id="" >
+                    <label for="">Pix</label>
+                </div>
+                <div class="formaPag">
+                    <input type="radio" name="pagamento" id="" >
+                    <label for="">Cartão de crédito</label>
+                </div>
+                <div class="formaPag">
+                    <input type="radio" name="pagamento" id="">
+                    <label for="">Boleto</label>
+                </div>
+            </div>
+
+        
+
+    </section>
+
+    <aside>
+        <div class="container-resumo">
+            <h3>Resumo</h3>
+            
+            <div>
+                <span>Subtotal</span>
+
+                <span>
+                  
+                    <span class="subTotal"></span>
+                </span>
+
+            </div>
+            <div>
+                <div style="display:none">
+                    <input type="text" placeholder="digite o cep" >
+                    <button>calcular frete</button>
+    
+                </div>
+                <span>Entrega</span>
+
+               
+                <span class="valorFreteSpan"></span>
+
+            </div>
+       
+            <div>
+                <span>Total</span>
+
+                
+                <span class="valorTotalSpan"></span>
+            </div>
+            <button class="btn-continue-buy">continuar para pagamento</button>
+
+            <form method="post" action="/pageCart" class="formDados">
+        
+                <input type="text" name="tipoPedido" value="Venda" style="display:none">
+                <input type="text" name="valorFrete" value="" class="valorFrete" style="display:none">
+                <input type="text" name="valorPedido" value="" class="valorPedido" style="display:none">
+                <input type="text" name="valorTotal" value="" class="valorTotal"  style="display:none">
+                <input type="text" name="idAddress" value="" class="idAddress" style="display:none">
+                <input type="text" name="formaPag" value="" class="formaPagamento" style="display:none">
+                <button class="btn-finish-buy">Finalizar Compra</button>
+            </form>
+
+        </div>
+    </aside>
+
+   </main>
+
+
+
+
+   <footer>
+
+   </footer>
+</body>
+    <script src="../javascripts/pageCart.js"></script>
+    
+</html>

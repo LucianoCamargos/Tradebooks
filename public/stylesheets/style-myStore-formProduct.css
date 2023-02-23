@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #0D203B;
+    ;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+}
+
+ul {
+    list-style: none;
+    margin: 10px 10px;
+}
+
+nav {
+    display: flex;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #23232e;
+    height: auto;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    height: auto;
+    margin: 10px 10px;
+}
+
+aside {
+    width: 20%;
+    height: auto;
+    box-shadow: #1C98ED 0px 1px 4px 0px;
+    margin-left: 5%;
+    height: 100%;
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    box-shadow: #1C98ED 0px 1px 4px 0px;
+    margin-right: 5%;
+}
+
+footer {
+    background: #23232e;
+    height: 100px;
+    width: 100%;
+}
+
+img {
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    width: 105px;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.images figcaption {
+    font-size: 13px;
+}
+
+.formProduct {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerDivs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.containerInputLabel {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+.nav-forms {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    cursor: pointer;
+}
+
+.div-logo-user img {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+}
+
+.div-logo-user {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100px;
+    align-items: center;
+    gap: 10px;
+}
+
+aside div {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 5px;
+    margin-left: 15px;
+
+}
+
+form {
+    padding: 3%;
+    gap: 5px;
+}
+
+button {
+    width: auto;
+    height: 40px;
+    margin: 30px 10px 20px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background: #1C98ED;
+    border: none;
+    border-radius: 15px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4ab0f5;
+}
+
+input,
+select,
+textarea {
+    font-size: 18px;
+    border: 1px solid #1C98ED;
+    border-radius: 10px;
+    padding: 5px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media(max-width:1400px) {
+
+    .containerDivs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+@media(max-width:710px) {
+    .div-logo-user {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 100px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    aside div {
+        align-items: end;
+        margin-left: 2px;
+    }
+}
+
+@media(max-width: 570px) {
+    main {
+        margin-right: 2%;
+    }
+}

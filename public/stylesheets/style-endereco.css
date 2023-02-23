@@ -1,0 +1,87 @@
+.container-endereco {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+
+   
+    margin: 10px;
+
+}
+
+#formEnde {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: 0 30px;
+    border: 1px #1C98ED solid;
+    box-shadow: #1C98ED 0px 1px 4px 0px;
+}
+.container-enderecos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.div-meus-enderecos {
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+
+}
+.div-meus-enderecos h1{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.enderecos {
+    
+    display: flex;
+    flex-direction: column;
+    
+    width: 225px;
+
+    gap: 10px;
+    margin: 10px;
+    
+    border: 1px #1C98ED solid;
+    box-shadow: #1C98ED 0px 1px 4px 0px;
+
+}
+.enderecos .button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    
+   
+}
+
+.button button, #editar{
+    height: 30px;
+    width: 70px;
+    background-color:#1C98ED ;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+.button button:hover, #editar:hover{
+
+    background-color:#4ab0f5 ;
+   
+    
+}
+.spanEndereco{
+    display: flex;
+    flex-direction: column;
+
+    padding:7px 10px;
+    gap: 5px;
+    font-size: 16px;
+}

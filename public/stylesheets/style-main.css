@@ -1,0 +1,21 @@
+.banner {
+    height: 250px;
+
+    background: url('../images/banner.png');
+    background-repeat: no-repeat;
+
+    background-size: 100%;
+    margin-top: 322px;
+
+}
+
+
+
+
+@media (min-width:769px) {
+    .banner {
+        height: 450px;
+        background-position: center;
+        margin-top: 145px;
+    }
+}

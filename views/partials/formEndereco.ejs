@@ -1,0 +1,65 @@
+<div class="container-endereco">
+    <button class="btnUserProfile" id="abrirFormEndereco">Adicionar novo endereço</button>
+    <div id="formEnde">
+
+        <form method="post" action="/userProfile/addAddress" id="formSalva">
+            <label for="cep">CEP</label>
+            <input id="cep" type="text" name="cep" placeholder="Digite o CEP aqui" />
+        
+            <label for="street">Rua</label>
+            <input id="street" type="text" name="rua" placeholder="Digite a rua aqui" />
+
+            <label for="number">Número</label>
+            <input id="number" type="text" name="numero" placeholder="Digite o numero aqui" />
+
+            <label for="complemento">Complemento</label>
+            <input id="complemento" type="text" name="complemento" placeholder="Digite o complemento aqui" />
+        
+            <label for="neighborhood">Bairro</label>
+            <input id="neighborhood" type="text" name="bairro" placeholder="Digite o bairro aqui" />
+        
+            <label for="city">Cidade</label>
+            <input id="city" type="text" name="cidade" placeholder="Digite a cidade aqui" />
+        
+            <label for="state">Estado</label>
+            <input id="state" type="text" name="estado" placeholder="Digite o estado aqui" />
+        
+            <button class="btnUserProfile">Salvar</button>
+        </form>
+
+        <form method="post" action="" id="formEdita">
+            
+            <label for="cep">CEP</label>
+            <input id="cep2" type="text" name="cep" placeholder="Digite o CEP aqui" />
+        
+            <label for="street">Rua</label>
+            <input id="street2" type="text" name="rua" placeholder="Digite a rua aqui" />
+
+            <label for="number">Número</label>
+            <input id="number2" type="text" name="numero" placeholder="Digite o numero aqui" />
+
+            <label for="complemento">Complemento</label>
+            <input id="complemento2" type="text" name="complemento" placeholder="Digite o complemento aqui" />
+        
+            <label for="neighborhood">Bairro</label>
+            <input id="neighborhood2" type="text" name="bairro" placeholder="Digite o bairro aqui" />
+        
+            <label for="city">Cidade</label>
+            <input id="city2" type="text" name="cidade" placeholder="Digite a cidade aqui" />
+        
+            <label for="state">Estado</label>
+            <input id="state2" type="text" name="estado" placeholder="Digite o estado aqui" />
+        
+            <button class="btnUserProfile">Salvar Edição</button>
+        </form>
+
+        <button class="btnUserProfile" id="cancelarEndereco">Cancelar</button>
+    </div>
+<div class="div-meus-enderecos">
+    <h1>Lista de endereços</h1>
+    
+    
+    <%- include('./address') %>
+    
+</div>
+</div>

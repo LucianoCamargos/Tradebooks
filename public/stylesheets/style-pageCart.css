@@ -1,0 +1,195 @@
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  height: auto;
+
+  margin: 80px 10px;
+}
+.section-address-check{
+  width: 75%;
+  height: 70vh;
+  display: none;
+}
+.section-address-check h3{
+  color: #23232e;
+  font-size: 18px;
+  padding: 20px;
+  border-bottom: 1px #23232e3d solid;
+}
+.section-table-cart{
+    width: 75%;
+    height: 70vh;
+    overflow: auto;
+    display: block;
+}
+.section-table-cart::-webkit-scrollbar {
+  width: 3px;
+  height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+}
+
+.section-table-cart::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 2px;
+}
+
+.section-table-cart::-webkit-scrollbar-thumb {
+  background-color: #23232e3d;
+}
+
+aside{
+
+  width: 25%;
+  height: auto;
+  
+}
+ 
+ 
+ .tableTitle, .tabela-cart{
+    width: 100%;
+       
+}
+
+.tableTitle tr, .tabela-cart tr{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    border-bottom: 1px #23232e3d solid;
+    margin: 0 10px;
+  
+}
+
+td, th{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:6px;
+    
+}
+
+img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    width: 68px;
+  }
+
+ .span-qtde-cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+ }
+ .span-qtde-cart button{
+    width: 25px;
+    height: 25px;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background: #1C98ED;
+    cursor: pointer;
+    border-radius: 3px;
+   
+ }  
+
+
+ .span-qtde-cart input{
+    width: 23px;
+    height: 23px;
+    text-align: center;
+   
+ }
+.container-resumo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
+
+ .container-resumo h3{
+
+    color: #23232e;
+    font-size: 17px;
+    border-bottom: 1px #23232e3d solid;
+
+ }
+
+ .container-resumo div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    
+
+ }
+
+ .container-resumo button{
+  width: 300px;
+  height: 40px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  background: #1C98ED;
+  cursor: pointer;
+  border-radius: 3px;
+ }
+
+.btn-finish-buy{
+  display: none;
+}
+
+.button{
+  display: none !important;
+}
+
+.enderecos{
+  cursor: pointer;
+}
+
+.trocar-Address{
+  color: #23232e;
+  cursor: pointer;
+  display: none;
+}
+
+.trocar-Address:hover{
+  color: #1C98ED;
+}
+
+.address-check{
+  display: flex;
+  flex-direction: row;
+ align-items: center;
+}
+
+.container-forma-pagamento{
+  display: flex;
+  flex-direction: column;
+  
+
+}
+.container-forma-pagamento div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px #23232e3d  solid;
+  margin: 5px 0px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #23232e;
+}
+
+
+.formaPag{
+  cursor: pointer;
+}
+
+
+  button:hover {
+    background: #4ab0f5;
+}

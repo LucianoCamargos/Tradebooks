@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeBooks</title>
+    <link rel="shortcut icon" href="/images/log.ico" type="image/x-icon" />
+
+  
+    <link rel="stylesheet" href="../stylesheets/style-myStore-formProduct.css">
+    
+    
+</head>
+
+<body>
+   <header>
+      <nav>
+         <a href="/">
+
+            <img src="../images/logo.png" alt="" class="logo">
+         </a>
+      </nav>
+   </header>
+
+
+
+   <main>
+      <aside>
+         <!-- <ul>
+            <li>Novo Produto</li>
+            <li>Produtos</li>
+            <li>Vendas</li>
+            <li>Trocas</li>
+            <li>Carteira</li>
+         </ul> -->
+
+         <div class="div-logo-user">
+
+            <img src="../images/user-2.png" alt="" class="logo-user">
+            <strong>Olá</strong>
+            
+        </div>
+        <div class="nav-forms">
+
+            <div id="btn-navs">Novo Produto</div>
+            <div id="btn-navs">Produtos</div>
+            <div id="btn-navs">Vendas</div>
+            <div id="btn-navs">Trocas</div>
+            <div id="btn-navs">Carteira</div>
+        <div><a href="/userProfile">Voltar</a></div>
+         
+
+
+        </div>
+
+
+      </aside>
+      <section class="container">
+         <form method="post" action="/myStore/cadastrarBook" class="formProduct" enctype="multipart/form-data">
+
+            <div class="containerDivs">
+               <div class="containerInputLabel">
+                  <label for="">Título do livro</label>
+                  <input type="text" name="title_book">
+               </div>
+                  
+               <div class="containerInputLabel">
+                  <label for="">Categoria</label>
+                  <input type="text" name="category">
+   
+               </div>
+
+               <div class="containerInputLabel">
+   
+                  <label for="">Tipo</label>
+                  <select name="tipo" id="">
+                     <option value="Impresso">Impresso</option>
+                     <option value="Digital">Digital</option>
+                  </select>
+      
+               </div>
+
+            </div>
+
+            <div class="containerInputLabel">
+
+               <label for="">Descrição</label>
+               <textarea name="description" id="" cols="30" rows="10"></textarea>
+               
+            </div>
+            <div class="containerDivs">
+
+               <div class="containerInputLabel">
+   
+                  <label for="">Autor</label>
+                  <input type="text" name="autor">
+   
+               </div>
+   
+               <div class="containerInputLabel">
+   
+                  <label for="">Editora</label>
+                  <input type="text" name="editora">
+   
+               </div>
+               
+               <div class="containerInputLabel">
+   
+                  <label for="">Ano de edição</label>
+                  <input type="text" name="ano_edicao">
+   
+               </div>
+   
+               <div class="containerInputLabel">
+   
+                  <label for="">Número de edição</label>
+                  <input type="number" name="numero_edicao">
+   
+               </div>
+            </div>
+
+            <div class="containerDivs">
+
+
+               <div class="containerInputLabel">
+   
+                  <label for="">Acabamento</label>
+                  <input type="text" name="acabamento">
+   
+               </div>
+   
+               <div class="containerInputLabel">
+   
+                  <label for="">Idioma</label>
+                  <select name="idioma" id="">
+                     <option value="Português">Português</option>
+                     <option value="Inglês">Inglês</option>
+                  </select>
+   
+               </div>
+   
+               <div class="containerInputLabel">
+   
+                  <label for="">Número de páginas</label>
+                  <input type="number" name="numero_paginas">
+   
+               </div>
+   
+               <div class="containerInputLabel">
+                  
+                  <label for="">Condição do livro</label>
+                  <select name="condicao_livro" id="">
+                     <option value="Novo">Novo</option>
+                     <option value="Usado">Usado</option>
+                  </select>
+   
+               </div>
+   
+               <div class="containerInputLabel">
+   
+   
+                  <label for="">Tipo de anúncio</label>
+                  <select name="tipo_anuncio" id="">
+                     <option value="Venda">Venda</option>
+                     <option value="Troca">Troca</option>
+                     <option value="Venda_Troca">Venda/Troca</option>            
+                  </select>
+   
+               </div>
+
+            </div>
+            <div class="containerDivs">
+               <div class="containerInputLabel">
+                  <label for="">Quantidade</label>
+                  <input type="number" name="quantidade">
+               </div>
+               <div class="containerInputLabel">
+                  <label for="">Valor</label>
+                  <input type="text" name="preco"  maxlength="9" id="valor">
+               </div>
+               
+            </div>
+            
+            <div class="containerInputLabel">
+
+
+               <label for="">Galeria</label>
+               <input id="file" name="file[]" multiple="multiple" type="file"  />
+               
+             
+
+            </div>
+            <div class="images">
+               
+            </div>
+
+
+               <button type="submit"> Cadastrar</button>
+         </form>
+
+      </section>
+
+   </main>
+   <footer>
+
+   </footer>
+  
+
+   <script src="../javascripts/myStore.js"></script>
+
+</body>
+
+</html>

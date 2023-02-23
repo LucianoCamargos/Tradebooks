@@ -1,0 +1,72 @@
+<header>
+   <nav>
+
+      <!--Menu com logo, campo de busca, link para logar e icone carrinho-->
+      <div class="nav-bar">
+
+         <a href="/">
+
+            <img src="../images/logo.png" alt="" class="logo">
+         </a>
+         <div class="divBusca">
+
+            <input type="text" class="txtBusca" placeholder="Buscar..." />
+            <button class="btnBusca" id="btnBusca"><img src="../images/search.png" alt=""> </button>
+         </div>
+
+         <div class="link-nav">
+
+            <div class="link-login">
+
+               <img src="../images/user.png" alt="" class="logo-user">
+               
+               <% if (locals.isLogged){%>
+                  
+               <a id="myUser"><%=userLogged.FULL_NAME%></a>
+               <div class="containerLogout"  >
+                  <div class="arrow"></div>
+                  <a href="userProfile">Minha conta</a>
+                  <div class="hr" ></div>
+                  <a href="/login/logout">Sair</a>
+               </div>
+               <div>
+                
+                  
+               </div>
+               <% }else { %>
+               <a href="login">Entre ou Cadastre-se</a>
+               <% } %>
+            </div>
+
+            <div class="cart-cont">
+               <img src="../images/cart.png" alt="" class="logo-cart">
+               <span class="cart-itens"></span>
+            </div>
+         </div>
+         <!--Container do carrinho com itens adicionados-->
+         <div class="container-cart">
+            <div class="container-cart-books">
+               <div class="back-cart">
+                  <strong id="back-cart">Voltar</strong>
+               </div>
+          
+               
+               <span class="span-more-cart"><a href="/pageCart">Ir para o carrinho</a></span>
+            </div>
+         </div>
+        
+
+         <!--Container do carrinho com itens adicionados até aqui-->
+
+      </div>
+
+      <!--Segundo menu-->
+      <div class="menu-nav">
+         <a href="/pageProducts">Compre Livros</a>
+         <a href="/pageProducts">Troque Livros</a>
+      </div>
+
+ 
+   </nav>
+
+</header>
